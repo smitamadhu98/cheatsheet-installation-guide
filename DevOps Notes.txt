@@ -1,0 +1,289 @@
+What is devops?
+********************
+
+DevOps is a combination of people, processes and tools that work together in going from an idea to execution and delivering high quality software consistently.
+
+SDLC Lifecycle?   normal DevOps Lifecycle
+
+Plan -> coding -> Build -> Test -> Release -> Deploy -> operation -> Monitor
+___________________________________________________________________________
+
+The Key components of devops are
+
+Infrastruction Authomation Monitoring
+
+Infrastructure means provisioning the server or database, so that comes under infrastructure. this can be done using terraform or ansible
+
+Automation means the process should happen without any manual intervention thats where the concept of CI/CD comes in
+
+and lastly is monitoring which is nothing but keeping track of the application.
+___________________________________________________________________________________________________________________
+
+diff betw continous deployment and continous delivery??
+***************************************************
+
+we already know the traditional method in SDLC like waterfall model and all, 
+so whenever we creating a new application, so developers has to write a lot of code then they have to pass it through a testing department and build it so that is
+converting it into cicd or agile methodology, so here what we will do is we gonna connect the developer env testing env and operations env
+
+so when it comes to integration, we will integrate this all entities like testing and as well as we will have to deliver into one of the server
+when it comes to continous deployemnet, we will have this servers we can deploy this applications continous manner without any manual intervention.
+
+__________________________________________________________________________________________________________________
+
+Continous Integration is an automation process in devops which generates software and its features quickly and efficiently.
+
+the goal of CI is to detect defects at very early stage of coding so as not to multiply
+
+Continous delivery is an automated process of delivering code change to servers quickly and efficiently 
+
+deployment could also mean server provisioning, installing dependencies on servers, configuration changes,network changes, deploy artifacts to the servers and many more things
+_____________________________________________________________________________________________________________________
+
+What is Build?  Build is nothing but conversion of source code into a compilation code. So, we take the source code and compiling it to get an output and that output  in devops is called artifacts. let that be ear file war file or jar file.
+
+and we have different tools for that. majorly we use Maven.
+______________________________________________________________________________________________________________________
+
+IDE is used by developers for coding this ide is integrated by version control systems to  store and version the code.
+
+build tools based on the programing language.
+
+software repositorties to store artifacts - nexus
+
+CI tools that integrates everything - jenkins
+
+__________________________________________________________________________________________________________________
+
+
+
+____________________________________________________________________________________________________________________
+
+What are containers?
+
+suppose your application is dependent on dependencies and libaries to run on any system, so in order to run it on a server, these dependecies need to configured the exact same way on the server. and that is not at all feasible.
+
+it is highly possible that it works on one server but fails on another. so manually configuring the server according to the application is not at all a good practise.
+so thats where Containers comes into picture. Container help package the application and its dependencies into an image that can be run on any system without worying about dependencies.
+
+and one such technology that helps us work with containers is Docker.
+
+So developers can create docker file out of the application that specifies the dependencies and that docker file can be used during build to build the docker image 
+and that image can then be run on any server using simple docker run command.
+
+
+one major functionality of containers is that it enables isolation between processes.
+so each container is an isolated instance and this allows us to run multiple containers each having its own seperate instance of the application on the same server
+____________________________________________________________________________________________________________________
+
+What is kubernates?
+
+Kubernetes is a popular container orchestration platform that helps declare how containers should be deployed and ensure that it is always run in the same way as declared.
+
+It can help auto scale containers as well as the underlying infrastructure based on need and manage resources on the underlying servers to ensure optimal resource utilization.
+___________________________________________________________________________________________________________________
+ 
+___________________________________________________________________________________________________________________
+						LINUX COMMANDS
+___________________________________________________________________________________________________________________
+
+
+echo $SHEll      --> The echo command helps you print on the screen and the dollar symbol helps you specify an environment
+
+	ls 		-> list files and folders
+
+	cd 		-> change directory -> 
+
+	pwd 		-> present working directory
+
+	mkdir  		-> make directory   -> used to create directory
+
+	mkdir -p /tmp/asia/india/mumbai   		 -> make directory hierarchy in a single line
+
+	rm -r /tmp/asia/india/mumbai  			 -> remove directory and all of its contents
+
+	cp -r my_dir1 /tmp/my_dir1  			 -> copy one directory and all of its contents into another directory
+
+_________________________________________________________________________________________________
+						COMMANDS - Files
+--------------------------------------------------------------------------------------------------------------------------------
+
+	touch new_file.txt  			-> creates new file but with no content  -> empty file
+
+	cat>new_file.txt   			-> writes to the files
+	CTLR+D -> to exit 
+
+	cat new_file.txt  			-> to view the contents of the file
+	
+	cp new_file.txt copy_file.txt           -> Copy File
+
+	mv new_file.txt sample_file.txt		-> Move a file
+
+	rm new_file.txt				-> Remove a file
+
+____________________________________________________________________________________________________________________
+
+						PACKAGE MANAGEMENT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+	install software using yum   -> yum command helps to install the underlying dependencies as well
+
+	sudo yum install -y ansible                -> installs the software along with its dependencies
+
+	sudo yum list ansible  	       -> check version details
+
+	sudo yum remove -y ansible	       -> uninstall ansible/software
+	
+	sudo yum install -y ansible-2.8.11      -> install ansible version 2.8.11
+
+____________________________________________________________________________________________________________________
+							VI Editor
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+text editor in linux
+
+come installed by default with linux 
+	
+	-	vi index.html 
+
+		command mode 	insert mode
+
+		esc 		i
+
+ 		Delete a word 	x 	Delete a line 	dd
+		Copy and Paste	yy	p
+		Scroll up/down	CTLR+u	CTLR+d
+
+		Command Mode 	:
+
+		SAVE 		:w
+		QUIT(Discard)	:q
+		SAVE and Quit	:wq!
+		
+		How to find-> support I want to find "of" string	find command  ->	find /of
+
+		Press n key to move to all occurences of "of"
+		
+_______________________________________________________________________________________________________________
+					COMMAND TO KNOW USER ACCOUNTS DETAILS
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	to know which user am I 	Command -> 		whoami
+
+	gives more info about the user	Command ->		id
+
+	to switch from one user to another -Command->		su
+
+	if accesing one system from another-Command->		ssh aparna@19.8.2.0
+
+	*******When it comes to performing tasks. Not all users can do all tasks in Linux.   root user have access to perforning all activities like installing and configuring path 
+
+	to give access to root priviledges from regular user account use command ->		sudo
+
+	List all files and folder under root directory		sudo ls /root
+
+__________________________________________________________________________________________________________________
+
+	To download files/packages from Internet 		use command 	curl/wget
+
+	curt http://www.some-site.com/some_file.txt -o
+
+	wget http://www.some-site.com/some_file.txt -o some_file.txt
+
+__________________________________________________________________________________________________________________
+						CHECK OS VERSION
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	To know the current OS. Inspect the release files under the /etc directory.			ls /etc/*release*
+
+										cat /etc/*release*
+
+___________________________________________________________________________________________________________________
+
+Primary benefit of blue green deployment
+
+Blue-green deployment reduces downtime during updates as it allows for seemless switching between environments
+
+_____________________________________________________________________________________________________________________
+					    NETWORKING BASICS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	>ip link					IP link is to list and modify interfaces on the host IP.
+
+	> ip addr					Command is to see the IP addresses assigned to those interfaces.
+
+	>ip addr add 192.168.2.0/10 dev eth0		Command is used to set/assign IP addresses on the interfaces.
+
+                 *****Now remember, changes made using these commands are only valid until a restart. ****
+ 	*****If you want to persist these changes, you must set them in /etc/sysctl.conf  Network interfaces file.
+
+	>ip route 					The route command is used to view the routing table 
+		
+	>ip route add 192.168.1.0/24 via 192.168.2.1		IP route AD command is used to add entries into the routing table.
+
+	>cat /proc/sys/net/ipv4/ip_forward		The command to check if IP forwarding is enabled on a host. it should be 1.
+
+	Which of the following is a very first requirement to assign an IP address to a system? -> System must have a physical or virtual interface                                        								attached to it
+
+	On a Linux based system which of the following command can be used to display the kernel ip routing table?  -> route
+
+	Can we assign multiple IPs to a system?		yes
+
+	Can a gatewy connect a system to internet? 	yes
+
+__________________________________________________________________________________________________________________
+
+Troubleshoot 
+
+1) 	ping www.google.com
+	ping: socket: Operation not permitted			reason: doesnot have root user permissions 
+
+	sudo ping www.google.com		 is correct
+
+On app01 and app02: sudo ip route add 172.16.239.0/24 via 172.16.238.10
+
+On app03 and
+
+At basic level what is DNS used for ?	-> to resolve IP of a domain name
+
+On a Linux based system, which of the following file can be used to point domains/hostnames to IPs locally?	-> /etc/hosts
+
+On a Linux based system, which of the following file contains information about dns server i.e nameserver?		-> /etc/resolv.conf
+
+On host01, if we have an entry for app01 in /etc/hosts file like 172.168.238.12 app01 and the DNS server which is used by host01 has 172.168.239.10 as app01's IP then which IP host01 will pick for app01 as per priority? 		-> 172.168.238.12
+
+
+
+
+
+
+
+
+__________________________________________________________________________________________
+				DOCKER
+----------------------------------------------------------------------------------------------------------------------------
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+	
+
+	
+
+
+
+		
+
+	
+
+	
+
