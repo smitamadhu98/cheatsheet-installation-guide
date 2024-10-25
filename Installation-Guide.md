@@ -33,6 +33,13 @@ Check docker version:	$docker --version
 
 # Kubernetes Installation Guide
 
+  # Prerequisites for installing Kubernetes
+
+             - 2 GB or more of RAM per machine (any less will leave little room for your apps).
+             - 2 CPUs or more for control plane machines.
+             - Full network connectivity between all machines in the cluster (public or private network is fine).
+             - Unique hostname, MAC address, and product_uuid for every node. See here for more details.
+
 To form Kubernetes Cluster, we need the machine to have conternerized mechanism, so docker needs to be installed before installing kubernetes cluster
 validate:
 - swap is in disabled state **free -mh**    -> To disable swap, sudo swapoff -a can be used to disable swapping temporarily.
@@ -67,27 +74,24 @@ validate:
 
          sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
 
-        ![image](https://github.com/user-attachments/assets/60816253-3869-4008-829a-2a47609a664d)
+![image](https://github.com/user-attachments/assets/1f95edf9-d760-4bca-bbba-1810cfa7230d)
 
 
-     # Step 3: Enable Kubelet
+   # Step 3: Enable Kubelet
           systemctl enable kubelet
 
           systemctl restart kubelet
   
-     # Initialize kubeadm
+   # Step 4: Initialize kubeadm
 
           kubeadm init
 
-       Caution: Error is because I have taken 1 CPU instance
+  ![image](https://github.com/user-attachments/assets/69fa5280-f7e4-4723-9f8b-e5bae9d6ff35)
 
-    # Troubleshoot Error : Prerequisites for installing Kubernetes
 
-             - 2 GB or more of RAM per machine (any less will leave little room for your apps).
-             - 2 CPUs or more for control plane machines.
-             - Full network connectivity between all machines in the cluster (public or private network is fine).
-             - Unique hostname, MAC address, and product_uuid for every node. See here for more details.
+       Caution: kubeadm init is throwing error because I have considered 1 CPU instance but the required is 2 CPU Instance.
 
+  
              
 
 
