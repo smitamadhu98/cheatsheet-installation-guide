@@ -63,13 +63,10 @@ validate:
         exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni
         EOF
 
-        ![image](https://github.com/user-attachments/assets/c18aec5c-ca07-4147-9c77-70f9f75b3b39)
-
      # Step 2: Install kubelet, kubeadm and kubectl: 
 
         $ sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
-
-        ![image](https://github.com/user-attachments/assets/331fe063-9111-422a-ba6f-461569314705)
+  
 
      # Step 3: Enable Kubelet
           systemctl enable kubelet
@@ -80,7 +77,6 @@ validate:
 
           kubeadm init
 
-        ![image](https://github.com/user-attachments/assets/e4f819e6-f618-48f0-9ec3-78430d281044)
        Caution: Error is because I have taken 1 CPU instance
 
     # Troubleshoot Error : Prerequisites for installing Kubernetes
