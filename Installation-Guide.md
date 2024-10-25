@@ -39,7 +39,7 @@ validate:
 - SELinux is in diabled status **sestatus**
 - 
      # Set SELinux in permissive mode (effectively disabling it)
-      $ sudo setenforce 0
+       sudo setenforce 0
        sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
 
      # Installing kubeadm, kubelet and kubectl
@@ -65,8 +65,10 @@ validate:
 
      # Step 2: Install kubelet, kubeadm and kubectl: 
 
-        $ sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
-  
+         sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+
+        ![image](https://github.com/user-attachments/assets/60816253-3869-4008-829a-2a47609a664d)
+
 
      # Step 3: Enable Kubelet
           systemctl enable kubelet
