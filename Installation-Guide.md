@@ -10,6 +10,8 @@ Switch to root user : 		$ sudo -i
 
 Rename Hostname :         $ hostnamectl set-hostname master
                           $ bash
+
+                        
 ![image](https://github.com/user-attachments/assets/05101107-798b-4608-ac18-92e344f81cc7)
 
 
