@@ -1,11 +1,11 @@
 Package Management :
 
-The approack to installing Docker largely depends on the package manager for LInux Distribution. APT (ubuntu/Debian) and YUM for (red hat/Centos) are the two popular examples
+The approach to installing Docker largely depends on the package manager for LInux Distribution. APT (ubuntu/Debian) and YUM for (red-hat/Centos) are the two popular examples
 
 
 Docker Installation Guide
 
-Run the below Commands to install docker in linux based machine
+Launch an EC2 instance and run the below Commands to install docker in linux based machine:
 
 Switch to root user : 		$ sudo -i
 
