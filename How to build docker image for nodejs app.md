@@ -1,4 +1,4 @@
-# Steps to create a nodejs app
+# Steps to create a sample nodejs app
 
 reference - https://www.youtube.com/watch?v=DQJNtDm5qy0
 
