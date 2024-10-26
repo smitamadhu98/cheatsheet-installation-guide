@@ -48,6 +48,45 @@ Type node index.js in terminal. Application is listening on port 3000. Open the 
 
 # Steps to Dockerize the nodejs app
 
+1. Remove the node_module package
+2. Write a Dockerfile 
+   
+        FROM node:slim
+        WORKDIR /node-app
+        COPY . /node-app
+        RUN npm install
+        EXPOSE 3000
+        CMD node index.js 
+   
+4. Run the 'Docker build' command to build the image of the application from the Docker file
+
+   docker build -t madhusmita02/hey-nodejs-app:01 .
+
+   ![image](https://github.com/user-attachments/assets/b7ddb493-ab96-4209-837c-15229e72659c)
+   
+5. Run the container image
+
+   docker container run -d -p 3000:3000 madhusmita02/hey-nodejs-app:01
+
+6. To push the image to DockerHub
+
+    docker login -u username         -> login to docker hub by username and password
+
+    Once Login succeeded, push image to docker hub
+
+    docker push madhusmita02/hey-nodejs-app:01
+
+    Refresh Docker Hub repository to view the changes
+
+7. To pull image from Docker Hub
+
+   docker pull madhusmita02/hey-nodejs-app:01
+
+   
+
+   
+
+
 
 
 
