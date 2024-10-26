@@ -60,27 +60,27 @@ Type node index.js in terminal. Application is listening on port 3000. Open the 
    
 4. Run the 'Docker build' command to build the image of the application from the Docker file
 
-   docker build -t madhusmita02/hey-nodejs-app:01 .
+       docker build -t madhusmita02/hey-nodejs-app:01 .
 
    ![image](https://github.com/user-attachments/assets/b7ddb493-ab96-4209-837c-15229e72659c)
    
 5. Run the container image
 
-   docker container run -d -p 3000:3000 madhusmita02/hey-nodejs-app:01
+       docker container run -d -p 3000:3000 madhusmita02/hey-nodejs-app:01
 
-6. To push the image to DockerHub
+6. To push the image to DockerHub, first login to docker hub by username and password
 
-    docker login -u username         -> login to docker hub by username and password
+        docker login -u username         
 
     Once Login succeeded, push image to docker hub
 
-    docker push madhusmita02/hey-nodejs-app:01
+        docker push madhusmita02/hey-nodejs-app:01
 
     Refresh Docker Hub repository to view the changes
 
 7. To pull image from Docker Hub
 
-   docker pull madhusmita02/hey-nodejs-app:01
+       docker pull madhusmita02/hey-nodejs-app:01
 
    
 
