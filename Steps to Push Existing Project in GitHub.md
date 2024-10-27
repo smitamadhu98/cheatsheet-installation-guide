@@ -3,6 +3,8 @@
   Create a Git repository and copy the git path
 	Open VS code terminal and follow steps
 
+	cd to the project directory
+ 
 	git init -b master	        -> initialise git repository
 
 	git add . 	                -> to add all files in current directory
